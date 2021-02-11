@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using Microsoft.EntityFrameworkCore;
+using ChatonsBDD.Models;
 
 namespace ChatonsBDD.Models
 {
@@ -15,5 +16,8 @@ namespace ChatonsBDD.Models
             options.UseSqlite("Data Source=chatons.db");
 
         }
+
+
+        public DbSet<ChatonsBDD.Models.Chaton> Chaton { get; set; }
     }
 }
